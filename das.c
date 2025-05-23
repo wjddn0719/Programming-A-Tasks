@@ -5,6 +5,8 @@ int main(){
     printf("a");
     for(int i=1; i<=5; i++){
         int k=1;
-        if(k<i);
+        if(k<i){
+            
+        }
     }
 }
