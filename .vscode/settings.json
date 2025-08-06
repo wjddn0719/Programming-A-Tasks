@@ -55,5 +55,10 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "files.associations": {
+    "1115 이정우 2주차 5일 번 문제코드.C": "cpp",
+    "1115 이정우 2주차 5일 9711번 문제코드.C": "cpp",
+    "1115 이정우 2주차 5일 9711번 문제코드 copy.C": "cpp"
+  }
 }
