@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/jungwoo0719/Desktop/방학과제 c/1115 이정우 4주차",
+      "program": "/Users/jungwoo0719/Desktop/방학과제 c/1115 이정우 4주차/build/Debug/outDebug"
+    }
+  ]
+}
