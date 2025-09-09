@@ -63,6 +63,8 @@
     "functional": "cpp",
     "iostream": "cpp",
     "queue": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "stdlib.h": "c",
+    "stack": "cpp"
   }
 }

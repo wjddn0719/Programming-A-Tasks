@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/jungwoo0719/Desktop/방학과제 c/output/짝수 저장하고 realloc"
+relocations:     []
+...
