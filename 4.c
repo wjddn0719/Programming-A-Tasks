@@ -1,32 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int len_value[11]={0,};
-
-int len(int i,char **arr){
-    int l = 0;
-    for(int j=0; arr[i][j]!='\0'; j++){
-        l++;
-    }
-    return l;
-}
+struct point{
+    int x;
+    int y;
+};
 
 int main(){
-    char **p = (char**)malloc(10 * sizeof(char *));
-    for(int i=0; i<10; i++){
-        p[i] = (char*)malloc(101);  
-        scanf("%s", p[i]);
+    struct point s1;
+    struct point s2;
+    scanf("%d %d", &s1.x,&s1.y);
+    scanf("%d %d", &s2.x, &s2.y);
+    float sum = (s2.y-s1.y)*(s2.y-s1.y)+(s2.x-s1.x)*(s2.x-s1.x);
+    float o = 0;
+    for(int i=1; i*i<=sum; i++){
+        o = i;
     }
-    for(int i=1; i<=10; i++){
-        len_value[i] = len(i-1, p);
-    }
-    int max = len_value[1], flag = 1;
-    for(int i=1; i<=10; i++){
-        if(max<len_value[i]){
-            max = len_value[i];
-            flag = i;
-        }
-    }
-    printf("%s", p[flag-1]);
+    printf("%.2f", o);
     return 0;
 }

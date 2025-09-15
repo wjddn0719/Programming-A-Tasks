@@ -1,16 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
+struct address{
+    char name[20];
+    char number[20];
+};
 
 int main(){
-    int n;
-    scanf("%d", &n);
-    int *p = (int*)malloc(n * sizeof(int));
-    for(int i=0; i<n; i++){
-        scanf("%d", &p[i]);
+    int a,b;
+    struct address s[30];
+    scanf("%d", &a);
+    for(int i=1; i<=a; i++){
+        scanf("%s %s", s[i].name, s[i].number);
     }
-    int sum = 0;
-    for(int i=0; i<n; i++){
-        sum+=p[i];
+    scanf("%d", &b);
+    for(int i=1; i<=b; i++){
+        char nama[20];
+        int found = 0;
+        scanf("%s", nama);
+        for(int j=1; j<=a; j++){
+            if(!strcmp(s[j].name,nama)){
+                printf("%s\n", s[j].number);
+                found = 1;
+                break;
+            }
+        }
+        if(!found)printf("Not found\n");
     }
-    printf("%d", sum);
+    return 0;
 }

@@ -1,28 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int distinct(int flag, int a, int *p){
-    for(int i=0; i<flag; i++){
-        if(p[i]==a)return 0;
-    }
-    return 1;
-}
+struct Author{
+    char name[20];
+    int birth; 
+};
+
+struct Book{
+    char title[20];
+    int price;
+    struct Author author;
+};
 
 int main(){
-    int n, flag = 0;
-    scanf("%d", &n);
-    int *p = (int*)malloc(n * sizeof(int));
-    for(int i=0; i<n; i++){
-        int a;
-        scanf("%d", &a);
-        if(distinct(flag, a, p)){
-            p[flag] = a;
-            flag++;
-        }
+    struct Book s1;
+    struct Book s2;
+    scanf("%s %d %s %d", s1.title, &s1.price, s1.author.name, &s1.author.birth);
+    scanf("%s %d %s %d", s2.title, &s2.price, s2.author.name, &s2.author.birth);
+    if(s1.price > s2.price){
+        printf("%s %d %s %d", s2.title, s2.price, s2.author.name, s2.author.birth);
     }
-    p = realloc(p, flag*sizeof(int));
-    for(int i=0; i<flag; i++){
-        printf("%d ", p[i]);
+    else{
+        printf("%s %d %s %d", s1.title, s1.price, s1.author.name, s1.author.birth);
     }
     return 0;
 }
