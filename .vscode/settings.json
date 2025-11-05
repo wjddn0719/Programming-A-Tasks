@@ -110,6 +110,7 @@
     "sstream": "cpp",
     "streambuf": "cpp",
     "variant": "cpp",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "set": "cpp"
   }
 }
